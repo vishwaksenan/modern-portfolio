@@ -475,7 +475,7 @@ export default function Portfolio() {
         >
           <AnimatedBackground />
           <div className="relative z-10">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Software Engineer - Backend</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Backend Software Engineer</h1>
             <p className="text-xl text-gray-300 max-w-2xl mb-10 mx-auto">
               Specialized in all backend system from deploying application in cloud to building low latency trading application. If you think I am the right guy for you, hit me up.
             </p>
@@ -664,131 +664,203 @@ export default function Portfolio() {
         <section id="projects" className="py-16 border-t border-gray-800">
           <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
           <div className="grid md:grid-cols-2 gap-8">
+
             {/* Project 1 */}
-            <Card className="bg-gray-900 border-gray-800">
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <CardTitle>Distributed Task Queue System</CardTitle>
-                  <Button variant="ghost" size="icon">
-                    <Github className="h-5 w-5" />
+            <Link href="https://github.com/vishwaksenan/istio-mtls-gateway-deployment" target="blank">
+              <Card className="bg-gray-900 border-gray-800 group hover:border-primary transition-colors">
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="group-hover:text-primary transition-colors">Istio mTLS Gateway</CardTitle>
+                    <Button variant="ghost" size="icon">
+                      <Github className="h-5 w-5" />
+                    </Button>
+                  </div>
+                  <CardDescription>Helm chart to deploy a transient application behind a Istio secured gateway</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 mb-4">
+                    Istio gateway with cert manager's self signed certifcate for mTLS gateway and a k8s job to delete the helm chart after a timeout time. 
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline">Kubernetes</Badge>
+                    <Badge variant="outline">Helm Chart</Badge>
+                    <Badge variant="outline">Istio</Badge>
+                    <Badge variant="outline">GCP</Badge>
+                    <Badge variant="outline">mTLS</Badge>
+                    <Badge variant="outline">Cleanup Job</Badge>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" size="sm" className="gap-2">
+                    <ExternalLink className="h-4 w-4" href="https://github.com/vishwaksenan/istio-mtls-gateway-deployment" />
+                    View Demo
                   </Button>
-                </div>
-                <CardDescription>Go, Redis, gRPC</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 mb-4">
-                  A high-performance distributed task queue system capable of processing millions of tasks per day with
-                  fault tolerance and horizontal scaling capabilities.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">Go</Badge>
-                  <Badge variant="outline">Redis</Badge>
-                  <Badge variant="outline">gRPC</Badge>
-                  <Badge variant="outline">Kubernetes</Badge>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <ExternalLink className="h-4 w-4" />
-                  View Demo
-                </Button>
-              </CardFooter>
-            </Card>
+                </CardFooter>
+              </Card>
+            </Link>
 
             {/* Project 2 */}
-            <Card className="bg-gray-900 border-gray-800">
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <CardTitle>Real-time Analytics API</CardTitle>
-                  <Button variant="ghost" size="icon">
-                    <Github className="h-5 w-5" />
+            <Link href="https://github.com/vishwaksenan/terraform-workspace-seperation" target="blank">
+              <Card className="bg-gray-900 border-gray-800 group hover:border-primary transition-colors">
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="group-hover:text-primary transition-colors">Terraform IOT/ML Infrastructure</CardTitle>
+                    <Button variant="ghost" size="icon">
+                      <Github className="h-5 w-5" />
+                    </Button>
+                  </div>
+                  <CardDescription>IaaC for AWS using Terraform</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 mb-4">
+                  High level goal is to run a seperate IOT and ML infrastructure for dev and prod in different regions using terraform workspace separation.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline">Terraform</Badge>
+                    <Badge variant="outline">AWS</Badge>
+                    <Badge variant="outline">IOT</Badge>
+                    <Badge variant="outline">Sage Maker</Badge>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" size="sm" className="gap-2">
+                    <ExternalLink className="h-4 w-4" href="https://github.com/vishwaksenan/terraform-workspace-seperation" />
+                    View Demo
                   </Button>
-                </div>
-                <CardDescription>Node.js, TypeScript, MongoDB</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 mb-4">
-                  An API for collecting and analyzing real-time user behavior data, with dashboards and reporting
-                  capabilities.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">Node.js</Badge>
-                  <Badge variant="outline">TypeScript</Badge>
-                  <Badge variant="outline">MongoDB</Badge>
-                  <Badge variant="outline">WebSockets</Badge>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <ExternalLink className="h-4 w-4" />
-                  View Demo
-                </Button>
-              </CardFooter>
-            </Card>
+                </CardFooter>
+              </Card>
+            </Link>
 
             {/* Project 3 */}
-            <Card className="bg-gray-900 border-gray-800">
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <CardTitle>Microservices Authentication System</CardTitle>
-                  <Button variant="ghost" size="icon">
-                    <Github className="h-5 w-5" />
+            <Link href="https://github.com/vishwaksenan/Battle_of_Time_Card_Detection" target="blank">
+              <Card className="bg-gray-900 border-gray-800 group hover:border-primary transition-colors">
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="group-hover:text-primary transition-colors">Battle of Time Card Detection</CardTitle>
+                    <Button variant="ghost" size="icon">
+                      <Github className="h-5 w-5" />
+                    </Button>
+                  </div>
+                  <CardDescription>Computer Vision ML Application</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 mb-4">
+                    A Machine Learning pipeline to detect the Doctor Who card (A BBC Show) in a green background video file.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline">OpenCV</Badge>
+                    <Badge variant="outline">Tensorflow</Badge>
+                    <Badge variant="outline">Scale Invariant Feature Transform (SIFT)</Badge>
+                    <Badge variant="outline">Computer Vision</Badge>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" size="sm" className="gap-2">
+                    <ExternalLink className="h-4 w-4" href="https://github.com/vishwaksenan/Battle_of_Time_Card_Detection" />
+                    View Demo
                   </Button>
-                </div>
-                <CardDescription>Java, Spring Boot, JWT</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 mb-4">
-                  A secure authentication and authorization system for microservices architecture with OAuth2 and JWT
-                  support.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">Java</Badge>
-                  <Badge variant="outline">Spring Boot</Badge>
-                  <Badge variant="outline">JWT</Badge>
-                  <Badge variant="outline">OAuth2</Badge>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <ExternalLink className="h-4 w-4" />
-                  View Demo
-                </Button>
-              </CardFooter>
-            </Card>
-
+                </CardFooter>
+              </Card>
+            </Link>
+            
             {/* Project 4 */}
-            <Card className="bg-gray-900 border-gray-800">
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <CardTitle>Database Migration Tool</CardTitle>
-                  <Button variant="ghost" size="icon">
-                    <Github className="h-5 w-5" />
+            <Link href="https://github.com/vishwaksenan/cfd_multiprocessing" target="blank">
+              <Card className="bg-gray-900 border-gray-800 group hover:border-primary transition-colors">
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="group-hover:text-primary transition-colors">Computational Fluid Dynamic Application</CardTitle>
+                    <Button variant="ghost" size="icon">
+                      <Github className="h-5 w-5" />
+                    </Button>
+                  </div>
+                  <CardDescription>C++ application made faster using MPI</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 mb-4">
+                  Computation Fluid Dynamics mini application (karman) which is made faster using Message Passing Interfacing (MPI) in C++.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline">C++</Badge>
+                    <Badge variant="outline">MPI</Badge>
+                    <Badge variant="outline">Multi Processing</Badge>
+                    <Badge variant="outline">1D Decomposition</Badge>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" size="sm" className="gap-2">
+                    <ExternalLink className="h-4 w-4" href="https://github.com/vishwaksenan/cfd_multiprocessing" />
+                    View Demo
                   </Button>
-                </div>
-                <CardDescription>Python, PostgreSQL, MySQL</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 mb-4">
-                  A tool for seamless migration between different database systems with data validation and
-                  transformation capabilities.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">Python</Badge>
-                  <Badge variant="outline">PostgreSQL</Badge>
-                  <Badge variant="outline">MySQL</Badge>
-                  <Badge variant="outline">ETL</Badge>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <ExternalLink className="h-4 w-4" />
-                  View Demo
-                </Button>
-              </CardFooter>
-            </Card>
+                </CardFooter>
+              </Card>
+            </Link>
 
-            {/* Project 5 - This will be centered when it's the last in an odd-numbered collection */}
+            {/* Project 5 */}
+            <Link href="https://github.com/vishwaksenan/text-sentiment-annotator" target="blank">
+              <Card className="bg-gray-900 border-gray-800 group hover:border-primary transition-colors">
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="group-hover:text-primary transition-colors">Text Sentiment Annotator</CardTitle>
+                    <Button variant="ghost" size="icon">
+                      <Github className="h-5 w-5" />
+                    </Button>
+                  </div>
+                  <CardDescription>React application for ML annotations</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 mb-4">
+                  A web application tool to annotate sentiment of the text from the huge CSV file. Build using CRA and processes the CSV data file.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline">React</Badge>
+                    <Badge variant="outline">Annotation</Badge>
+                    <Badge variant="outline">File I/O</Badge>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" size="sm" className="gap-2">
+                    <ExternalLink className="h-4 w-4" href="https://github.com/vishwaksenan/text-sentiment-annotator" />
+                    View Demo
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Link>
+
+            {/* Project 6 */}
+            <Link href="https://github.com/vishwaksenan/visual_tire_inspection" target="blank">
+              <Card className="bg-gray-900 border-gray-800 group hover:border-primary transition-colors">
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="group-hover:text-primary transition-colors">Visual Tire Inspector</CardTitle>
+                    <Button variant="ghost" size="icon">
+                      <Github className="h-5 w-5" />
+                    </Button>
+                  </div>
+                  <CardDescription>Computer Vision application to detect manufacturer's fault</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 mb-4">
+                  A web application tool to annotate sentiment of the text from the huge CSV file. Build using CRA and processes the CSV data file.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline">Terraform</Badge>
+                    <Badge variant="outline">AWS</Badge>
+                    <Badge variant="outline">IOT</Badge>
+                    <Badge variant="outline">Sage Maker</Badge>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" size="sm" className="gap-2">
+                    <ExternalLink className="h-4 w-4" href="https://github.com/vishwaksenan/visual_tire_inspection" />
+                    View Demo
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Link>
+
+            
+
+            {/* Project 5 - This will be centered when it's the last in an odd-numbered collection
             <Card className="bg-gray-900 border-gray-800 md:col-span-2 md:max-w-2xl md:mx-auto">
               <CardHeader>
                 <div className="flex justify-between items-start">
@@ -817,7 +889,9 @@ export default function Portfolio() {
                   View Demo
                 </Button>
               </CardFooter>
-            </Card>
+            </Card> */}
+
+
           </div>
         </section>
 
@@ -889,11 +963,11 @@ export default function Portfolio() {
               </Button>
             </Link>
             <Link href={socialLinks.email}>
-            <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
-              <Mail className="h-5 w-5" />
-            </Button>
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
+                <Mail className="h-5 w-5" />
+              </Button>
             </Link>
-            
+
           </div>
         </div>
       </footer>
