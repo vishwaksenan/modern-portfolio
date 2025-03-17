@@ -27,7 +27,7 @@ import Link from "next/link"
 const socialLinks = {
   github: "https://github.com/vishwaksenan",
   linkedin: "https://linkedin.com/in/vishwaksenan",
-  resume: "https://drive.google.com/file/d/1C1d_9zzaGTekr2F452Fg4w5Iadug2YGR/view?usp=drive_link", // Place your resume in the public folder
+  resume: "https://drive.google.com/file/d/1F3tCdRF0kw_RROdFeisKX94bt9QDjRIz/view?usp=sharing", // Place your resume in the public folder
   email: "mailto:vishwaksenang@gmail.com",
 }
 
@@ -480,12 +480,10 @@ export default function Portfolio() {
               Specialized in all backend system from deploying application in cloud to building low latency trading application. If you think I am the right guy for you, hit me up.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href={socialLinks.email}>
-                <Button className="gap-2" onClick={() => scrollToSection("#contact")}>
-                  <Mail className="h-4 w-4" />
-                  Contact Me
-                </Button>
-              </Link>
+              <Button className="gap-2" onClick={() => scrollToSection("#contact")}>
+                <Mail className="h-4 w-4" />
+                Contact Me
+              </Button>
               <Link href={socialLinks.github} target="blank">
                 <Button variant="outline" className="gap-2">
                   <Github className="h-4 w-4" />
@@ -679,7 +677,7 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4">
-                    Istio gateway with cert manager's self signed certifcate for mTLS gateway and a k8s job to delete the helm chart after a timeout time. 
+                    Istio gateway with cert manager's self signed certifcate for mTLS gateway and a k8s job to delete the helm chart after a timeout time.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline">Kubernetes</Badge>
@@ -713,7 +711,7 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4">
-                  High level goal is to run a seperate IOT and ML infrastructure for dev and prod in different regions using terraform workspace separation.
+                    High level goal is to run a seperate IOT and ML infrastructure for dev and prod in different regions using terraform workspace separation.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline">Terraform</Badge>
@@ -762,7 +760,7 @@ export default function Portfolio() {
                 </CardFooter>
               </Card>
             </Link>
-            
+
             {/* Project 4 */}
             <Link href="https://github.com/vishwaksenan/cfd_multiprocessing" target="blank">
               <Card className="bg-gray-900 border-gray-800 group hover:border-primary transition-colors">
@@ -777,7 +775,7 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4">
-                  Computation Fluid Dynamics mini application (karman) which is made faster using Message Passing Interfacing (MPI) in C++.
+                    Computation Fluid Dynamics mini application (karman) which is made faster using Message Passing Interfacing (MPI) in C++.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline">C++</Badge>
@@ -809,7 +807,7 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4">
-                  A web application tool to annotate sentiment of the text from the huge CSV file. Build using CRA and processes the CSV data file.
+                    A web application tool to annotate sentiment of the text from the huge CSV file. Build using CRA and processes the CSV data file.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline">React</Badge>
@@ -840,7 +838,7 @@ export default function Portfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4">
-                  A web application tool to annotate sentiment of the text from the huge CSV file. Build using CRA and processes the CSV data file.
+                    A web application tool to annotate sentiment of the text from the huge CSV file. Build using CRA and processes the CSV data file.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline">Terraform</Badge>
@@ -858,7 +856,7 @@ export default function Portfolio() {
               </Card>
             </Link>
 
-            
+
 
             {/* Project 5 - This will be centered when it's the last in an odd-numbered collection
             <Card className="bg-gray-900 border-gray-800 md:col-span-2 md:max-w-2xl md:mx-auto">
@@ -907,9 +905,9 @@ export default function Portfolio() {
               <CardContent>
                 <form className="space-y-4">
                   <div className="grid gap-2">
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name">Subject</label>
                     <input
-                      id="name"
+                      id="subject"
                       className="flex h-10 w-full rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       placeholder="Your name"
                     />
