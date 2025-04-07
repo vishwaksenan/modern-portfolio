@@ -945,7 +945,7 @@ export default function Portfolio() {
                       <Button
                         className="w-full"
                         onClick={() => {
-                          const mailtoUrl = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+                          const mailtoUrl = `mailto:vishwaksenang@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
                           window.location.href = mailtoUrl;
                         }}
                       >
