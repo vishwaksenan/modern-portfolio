@@ -290,6 +290,11 @@ export default function Portfolio() {
   const [activeSkillsTab, setActiveSkillsTab] = useState("languages")
   const sectionsRef = useRef<{ [key: string]: HTMLElement | null }>({})
 
+  // For Mail
+  const [subject, setSubject] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
   useEffect(() => {
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth < 850)
@@ -413,7 +418,7 @@ export default function Portfolio() {
   // Skill data
   const skillsData = {
     languages: ["Python", "Golang", "C++", "Java"],
-    frameworks: ["Istio", "gRPC", "Service Mesh", "Apache Kafka", "Prometheus"],
+    frameworks: ["Istio", "gRPC", "Apache Kafka", "Prometheus"],
     databases: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "DynamoDB", "Cassandra"],
     tools: ["Docker", "Kubernetes", "AWS", "GCP", "Git", "Github Actions", "Terraform", "Ansible"],
   }
@@ -910,6 +915,8 @@ export default function Portfolio() {
                       id="subject"
                       className="flex h-10 w-full rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       placeholder="Your name"
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
                     />
                   </div>
                   <div className="grid gap-2">
@@ -919,6 +926,8 @@ export default function Portfolio() {
                       type="email"
                       className="flex h-10 w-full rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       placeholder="Your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div className="grid gap-2">
@@ -927,11 +936,21 @@ export default function Portfolio() {
                       id="message"
                       className="flex min-h-[120px] w-full rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       placeholder="Your message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                     />
                   </div>
                   <div className="grid gap-2">
                     <Link href={socialLinks.email} className="w-full">
-                      <Button className="w-full">Send Message</Button>
+                      <Button
+                        className="w-full"
+                        onClick={() => {
+                          const mailtoUrl = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+                          window.location.href = mailtoUrl;
+                        }}
+                      >
+                        Send Message
+                      </Button>
                     </Link>
                   </div>
 
