@@ -27,7 +27,7 @@ import Link from "next/link"
 const socialLinks = {
   github: "https://github.com/vishwaksenan",
   linkedin: "https://linkedin.com/in/vishwaksenan",
-  resume: "https://drive.google.com/file/d/1F3tCdRF0kw_RROdFeisKX94bt9QDjRIz/view?usp=sharing", // Place your resume in the public folder
+  resume: "https://drive.google.com/file/d/103syE81ZVszBlG4YRRs_xuIJo5kIaqKo/view?usp=sharing", // Place your resume in the public folder
   email: "mailto:vishwaksenang@gmail.com",
 }
 
