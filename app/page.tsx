@@ -914,7 +914,7 @@ export default function Portfolio() {
                     <input
                       id="subject"
                       className="flex h-10 w-full rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                      placeholder="Your name"
+                      placeholder="Email Subject"
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
                     />
