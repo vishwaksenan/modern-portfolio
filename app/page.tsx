@@ -498,7 +498,7 @@ export default function Portfolio() {
               <Link href={socialLinks.resume} target="blank">
                 <Button variant="secondary" className="gap-2">
                   <FileText className="h-4 w-4" />
-                  Download Resume
+                  View Resume
                 </Button>
               </Link>
             </div>
