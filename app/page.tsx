@@ -350,7 +350,7 @@ export default function Portfolio() {
       isPromotion: false,
       responsibilities: [
         "Created self-service code deployment system (CI-CD), reducing deployment time by 90% using helm template, GCP cloud build and istio authentication and authorization mechanisms.",
-        "Deployed bank's custom security services to make the VM instance 100% complaint by creating a custom linux's systemd service.",
+        "Deployed bank's custom security services to make the VM instance 100% compliant by creating a custom linux's systemd service.",
         "Resolved a critical vulnerability in the platform within 24 hours for the platform to be 100% FCA complaint by updating the user’s access level and implementing new security groups in Terraform.",
         "Deploying GCP's external OAuth connection to Bank's on-prem active directory expose the application only for certain authorization levels."
       ],
